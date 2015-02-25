@@ -7,19 +7,17 @@
 
 	<class name="com.fulminators.model.Answer" table="answer">
 
-		<id name="answerid" type="int" column="answerid">
+		<id name="answerID" type="int" column="answerid">
 			<generator class="native" />
 		</id>
 
-		<property name="questionid" column="questionid" type="int" />
+		<property name="questionID" column="questionid" type="int" />
 
-		<property name="participantid" column="participantid" type="int" />
+		<property name="participantID" column="participantid" type="int" />
 
-		<property name="question" column="question" type="string" />
+		<property name="choiceText" column="choiceText" type="string" />
 
-		<property name="choiceText" column="choiceText" type="String" />
-
-		<property name="answer" column="answer" type="String" />
+		<property name="answer" column="answer" type="string" />
 
 	</class>
 </hibernate-mapping>

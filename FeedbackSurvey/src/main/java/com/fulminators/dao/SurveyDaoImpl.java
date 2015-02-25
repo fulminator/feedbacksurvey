@@ -56,9 +56,9 @@ public class SurveyDaoImpl implements SurveyDao {
 			}
 			System.err.println("Error! Survey not saved!");
 			e.printStackTrace();
-		} finally {
-			session.flush();
+		} finally {	
 			if (session != null && session.isOpen()) {
+				session.flush();
 				session.close();
 			}
 		}
@@ -77,9 +77,9 @@ public class SurveyDaoImpl implements SurveyDao {
 			}
 			System.err.println("Error! Survey not updated!");
 			e.printStackTrace();
-		} finally {
-			session.flush();
+		} finally {			
 			if (session != null && session.isOpen()) {
+				session.flush();
 				session.close();
 			}
 		}

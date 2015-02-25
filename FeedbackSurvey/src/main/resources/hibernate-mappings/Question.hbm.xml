@@ -6,7 +6,7 @@
 <hibernate-mapping>
 	<class name="com.fulminators.model.Question" table="question">
 
-		<id name="questionid" type="int" column="questionid">
+		<id name="questionID" type="int" column="questionid">
 			<generator class="native" />
 		</id>
 
@@ -14,8 +14,8 @@
 
 		<property name="choiceMultiple" column="choiceMultiple" type="boolean" />
 
-		<!-- one to many relationship -->
-		<many-to-one name="surveyid" class="com.fulminator.model.Survey"
+		<!-- many to one relationship -->
+		<many-to-one name="surveyID" class="com.fulminators.model.Survey"
 			column="surveyid" not-null="true"  />
 
 	</class>
