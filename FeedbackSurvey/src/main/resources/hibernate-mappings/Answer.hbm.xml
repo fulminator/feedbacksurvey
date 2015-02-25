@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="com.fulminators.model.Answer" table="answer">
+
+		<id name="answerid" type="int" column="answerid">
+			<generator class="native" />
+		</id>
+
+		<property name="questionid" column="questionid" type="int" />
+
+		<property name="participantid" column="participantid" type="int" />
+
+		<property name="question" column="question" type="string" />
+
+		<property name="choiceText" column="choiceText" type="String" />
+
+		<property name="answer" column="answer" type="String" />
+
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.fulminators.model.Question" table="question">
+
+		<id name="questionid" type="int" column="questionid">
+			<generator class="native" />
+		</id>
+
+		<property name="question" column="question" type="string" />
+
+		<property name="choiceMultiple" column="choiceMultiple" type="boolean" />
+
+		<!-- one to many relationship -->
+		<many-to-one name="surveyid" class="com.fulminator.model.Survey"
+			column="surveyid" not-null="true"  />
+
+	</class>
+</hibernate-mapping>
