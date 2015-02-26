@@ -12,7 +12,7 @@
 		<param-name>javax.faces.PROJECT_STAGE</param-name>
 		<param-value>Development</param-value>
 	</context-param>
-	
+
 	<!-- External file for managed beans -->
 	<context-param>
 		<param-name>javax.faces.CONFIG_FILES</param-name>
@@ -23,6 +23,12 @@
 	<welcome-file-list>
 		<welcome-file>faces/index.xhtml</welcome-file>
 	</welcome-file-list>
+
+	<!-- 404 error page -->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/error/404.xhtml</location>
+	</error-page>
 
 	<!-- JSF mapping -->
 	<servlet>
