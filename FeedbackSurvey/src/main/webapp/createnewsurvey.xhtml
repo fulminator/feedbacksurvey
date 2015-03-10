@@ -3,32 +3,38 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core">
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
 
 <ui:composition template="/WEB-INF/templates/BasicTemplate.xhtml">
 
 	<ui:define name="content">
 		<div class="container">
-			<h:form>
-				<h:panelGrid id="survey-panel" columns="2" border="0"
-					cellpadding="15" cellspacing="5">
-					<f:facet name="header">
-						<h:outputText value="Add Survey Information" />
-					</f:facet>
-					<h:outputLabel value="Title:" />
-					<h:inputText value="#{survey.title}" id="survey-title" />
-					<h:outputLabel value="Description:" />
-					<h:inputTextarea value="#{survey.description}"
-						id="survey-description" />
+			<div class="row">
+				<div class="col-lg-12">
 
-					<f:facet name="footer">
-						<h:commandButton value="Save" action="#{survey.saveSurvey}">
-							<f:ajax render="survey-title survey-description" execute="@form" />
-						</h:commandButton>
-					</f:facet>
-				</h:panelGrid>
+					<h:form>
+						<table>
+							<tr>
+								<td><h:outputLabel for="title" value="Title" /></td>
+								<td><p:inputText id="title" value="#{surveyMBean.title}" /></td>
+							</tr>
+							<tr>
+								<td><h:outputLabel for="description" value="Description" /></td>
+								<td><p:inputText id="description" value="#{surveyMBean.description}" />
+								</td>
+							</tr>
+							<tr>
+								<td><p:commandButton id="submit" value="Save"
+										action="#{surveyMBean.save}" ajax="false" /></td>
+								<td><p:commandButton id="reset" value="Reset"
+										action="#{surveyMBean.reset}" ajax="false" /></td>
+							</tr>
+						</table>
+					</h:form>
 
-			</h:form>
+				</div>
+			</div>
 		</div>
 
 	</ui:define>

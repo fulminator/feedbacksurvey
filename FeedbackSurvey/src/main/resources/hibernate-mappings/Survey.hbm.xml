@@ -7,7 +7,7 @@
 
 	<class name="com.fulminators.model.Survey" table="survey">
 
-		<id name="surveyID" type="int" column="surveyid">
+		<id name="surveyId" type="int" column="surveyid">
 			<generator class="native" />
 		</id>
 		

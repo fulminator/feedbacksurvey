@@ -11,10 +11,14 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<h1 class="text-center">We're Here</h1>
-					<img class="img-responsive center-block"
-						src="resources/img/profile.png" alt="engineer picture here" />
-					<h3 class="text-center">Just ask your questions</h3>
+
+					<!-- get parameters -->
+					<f:metadata>
+						<f:viewParam name="id" value="#{survey.surveyID}" />
+					</f:metadata>
+
+					<h:outputText action="#{survey.getDescription}" value="#{survey.description}"></h:outputText>
+
 				</div>
 			</div>
 		</div>

@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14247199291540" configfile="/FeedbackSurvey/src/main/webapp/WEB-INF/faces-config.xml"/>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14247199291540" configfile="/FeedbackSurvey/src/main/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="createsurvey.xhtml" x="122" y="178" id="pf14259484695600" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14259484695601" path="/createsurvey.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="survey.xhtml" x="338" y="178" id="pf14259484695602" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14259484695601" path="/survey.xhtml"/>
+  <links id="pf14259484695601" target="pf14259484695602" source="pf14259484695600" outcome="success"/>
+</pageflow:Pageflow>
